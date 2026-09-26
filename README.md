@@ -52,10 +52,7 @@ My projects span AXI4 memory-mapped interfaces, packet routing, APB peripherals,
 | **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
 | **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing, class-imbalance handling, classification evaluation, ECG trace extraction |
 
-<details>
-<summary><strong>Additional technical background & tools</strong></summary>
-
-<br/>
+### Additional technical background & tools
 
 | Area | Background |
 | --- | --- |
@@ -65,8 +62,6 @@ My projects span AXI4 memory-mapped interfaces, packet routing, APB peripherals,
 | **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis, lint, design for test, processor architecture |
 | **Additional FPGA platforms** | Intel/Altera Cyclone V, AMD Kintex-7 |
 | **Development environment** | Linux, Git, Make |
-
-</details>
 
 ## Professional Experience
 
