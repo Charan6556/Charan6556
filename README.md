@@ -131,6 +131,13 @@ A SystemVerilog processor project progressing from a single-cycle implementation
 
 **January 2026 – Present**
 
+- Worked on **digital design and Verilog RTL development** within the **ASIC front-end flow**.
+- Worked with **STA, FPGA architecture, RISC-V fundamentals, and DFT concepts**.
+- Developed **SystemVerilog/UVM testbenches** with directed and constrained-random tests.
+- Used **assertions (SVA), functional coverage, and code coverage** to validate design behavior.
+- Debugged RTL and testbench issues using **Synopsys VCS and Verdi**.
+- Mentored peers in **Verilog, SystemVerilog, UVM, and RTL design**.
+
 ## Teaching Experience
 
 ### Graduate Teaching Assistant · Colorado State University
