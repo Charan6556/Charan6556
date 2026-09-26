@@ -37,17 +37,18 @@ I'm an electrical engineering graduate student focused on **digital hardware des
 
 Alongside my graduate studies, I am an **ASIC Design Verification Trainee at Maven Silicon**.
 
-My projects span packet routing, APB peripherals, synchronous FIFOs, and processor design. As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
+My projects span AXI4 memory-mapped interfaces, packet routing, APB peripherals, synchronous FIFOs, and processor design. As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
 
 ## Technical Skills
 
 | Area | Skills demonstrated in my projects and teaching |
 | --- | --- |
 | **RTL & digital design** | Verilog, SystemVerilog, combinational and sequential logic, Mealy/Moore state machines, parameterized FIFOs, register interfaces, packet routing, processor design |
+| **Interfaces & protocols** | AXI4 memory-mapped transactions, five-channel handshakes, INCR bursts, byte strobes, narrow and unaligned accesses, APB transfers and wait states |
 | **UVM testbench development** | Transactions, sequences, sequencers, drivers, monitors, agents, environments, virtual sequencers, analysis ports, virtual interfaces, configuration |
 | **Functional verification** | Directed and constrained-random stimulus, independent scoreboards, reference models, readback checks, boundary testing, error injection, checker validation |
 | **Assertions & coverage** | SystemVerilog Assertions, bound FIFO/FSM properties, APB protocol checks, coverpoints, cross coverage |
-| **Simulation, lint & synthesis** | Cadence Xcelium, Synopsys VCS, waveform analysis, Verilator RTL lint, Yosys synthesis, SKY130 standard-cell mapping |
+| **Simulation, lint & synthesis** | Cadence Xcelium, SimVision, Synopsys VCS, waveform analysis, Verilator RTL lint, Yosys synthesis, SKY130 standard-cell mapping |
 | **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
 | **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing, class-imbalance handling, classification evaluation, ECG trace extraction |
 
@@ -59,7 +60,7 @@ My projects span packet routing, APB peripherals, synchronous FIFOs, and process
 | Area | Background |
 | --- | --- |
 | **Languages** | VHDL, C, C++, Perl |
-| **Interfaces & protocols** | AXI4 / AXI4-Lite, AHB, PCIe, UART, SPI |
+| **Interfaces & protocols** | AXI4-Lite, AHB, PCIe, UART, SPI |
 | **EDA tools** | Design Compiler, SpyGlass, Verdi, ModelSim, QuestaSim, Cadence Virtuoso, AMD Vivado |
 | **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis, lint, design for test, processor architecture |
 | **Additional FPGA platforms** | Intel/Altera Cyclone V, AMD Kintex-7 |
@@ -92,6 +93,16 @@ For the lab interview, I designed an **8-bit nanoprocessor from scratch in Quart
 Teaching these fundamentals strengthens how I reason about RTL, debug hardware, and explain design decisions.
 
 ## Selected Projects
+
+### [AXI4 Memory Slave — RTL & UVM Verification](https://github.com/Charan6556/axi4-memory-slave-uvm)
+
+A 16 KB AXI4 memory-mapped slave with five independent channels, 32-bit data, INCR bursts of up to 256 beats, and one outstanding burst per read/write direction.
+
+- Built a UVM master agent with separate read/write sequencers and drivers, a handshake monitor, and a byte-addressed reference-memory scoreboard checking IDs, data, responses, and final-beat behavior.
+- Verified byte strobes, narrow and unaligned accesses, memory and 4 KB page boundaries, error responses, and constrained-random traffic.
+- **Recorded Xcelium full-test run:** 178 writes, 151 reads, zero skipped bytes, **100% of the defined command, write-data, and response functional coverage bins**, and zero UVM warnings, errors, or fatals.
+
+[Full-test evidence](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/images/axi_full_seed1.png) · [Verification flow](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/images/axi_uvm_flow.png) · [Tests & current scope](https://github.com/Charan6556/axi4-memory-slave-uvm#tests)
 
 ### [1×3 Packet Router — RTL & UVM Verification](https://github.com/Charan6556/router-1x3-uvm)
 
