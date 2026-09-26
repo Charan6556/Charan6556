@@ -34,7 +34,7 @@
 
 ---
 
-## About Me
+## [About Me](#about-me)
 
 I'm an electrical engineering graduate student focused on **SoC and ASIC front-end design and verification**. I develop **Verilog/SystemVerilog RTL** and **UVM testbenches**, using independent reference models, **SystemVerilog Assertions (SVA)**, functional coverage, and simulation evidence to check design behavior.
 
@@ -44,7 +44,7 @@ My projects focus on **SoC building blocks**: AXI4 memory-mapped slaves, APB per
 
 As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
 
-## Technical Skills
+## [Technical Skills](#technical-skills)
 
 | Area | Skills demonstrated in my projects and teaching |
 | --- | --- |
@@ -70,7 +70,7 @@ As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I
 | **Additional FPGA platforms** | Intel/Altera Cyclone V, AMD Kintex-7 |
 | **Development environment** | Linux, Git, Make |
 
-## Selected Projects
+## [Selected Projects](#selected-projects)
 
 ### [AXI4 Memory Slave — RTL & UVM Verification](https://github.com/Charan6556/axi4-memory-slave-uvm)
 
@@ -125,7 +125,7 @@ A SystemVerilog processor project progressing from a single-cycle implementation
 
 </details>
 
-## Professional Experience
+## [Professional Experience](#professional-experience)
 
 ### ASIC Design Verification Trainee · Maven Silicon
 
@@ -138,7 +138,7 @@ A SystemVerilog processor project progressing from a single-cycle implementation
 - Debugged **RTL and testbench issues** using **Synopsys VCS and Verdi**.
 - Mentored peers in **Verilog, SystemVerilog, UVM, and RTL design**.
 
-## Teaching Experience
+## [Teaching Experience](#teaching-experience)
 
 ### Graduate Teaching Assistant · Colorado State University
 
@@ -156,14 +156,14 @@ For the lab interview, I designed an **8-bit nanoprocessor from scratch in Quart
 
 Teaching these fundamentals strengthens how I reason about RTL, debug hardware, and explain design decisions.
 
-## How I Approach Verification
+## [How I Approach Verification](#how-i-approach-verification)
 
 - **Model expected behavior independently** so DUT status signals cannot hide their own bugs.
 - **Start with boundaries and corner cases:** reset, full/empty transitions, protocol wait states, and malformed traffic.
 - **Check the checker** by confirming that intentional corruption produces failures.
 - **Connect claims to evidence:** retain scoreboards, coverage summaries, waveforms, and the scope of each recorded run.
 
-## Education
+## [Education](#education)
 
 **Colorado State University**  
 M.S. in Electrical Engineering · Expected December 2026
