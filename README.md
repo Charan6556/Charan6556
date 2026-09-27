@@ -168,7 +168,7 @@ Teaching these fundamentals strengthens how I reason about RTL, debug hardware, 
 ## [Education](#education)
 
 **Colorado State University**  
-M.S. in Electrical Engineering · Expected December 2026
+M.S. in Electrical Engineering · GPA: 3.611 · Expected December 2026
 
 ---
 
