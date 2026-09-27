@@ -15,6 +15,7 @@
 </p>
 
 <p align="center">
+  <a href="mailto:charangundepinni@gmail.com">charangundepinni@gmail.com</a> ·
   <a href="https://www.linkedin.com/in/charan-gundepinni">LinkedIn</a> ·
   <a href="https://github.com/Charan6556?tab=repositories">All Projects</a> ·
   <a href="#technical-skills">Technical Skills</a> ·
@@ -174,5 +175,6 @@ M.S. in Electrical Engineering · GPA: 3.611 · Expected December 2026
 
 <p align="center">
   Interested in SoC/ASIC RTL design and design verification opportunities.<br/>
+  <a href="mailto:charangundepinni@gmail.com"><strong>charangundepinni@gmail.com</strong></a> ·
   <a href="https://www.linkedin.com/in/charan-gundepinni"><strong>Let's connect on LinkedIn</strong></a>
 </p>
