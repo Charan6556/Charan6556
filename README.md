@@ -56,19 +56,18 @@ As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I
 | **Assertions & coverage** | SystemVerilog Assertions, bound FIFO/FSM properties, APB protocol checks, coverpoints, cross coverage |
 | **ASIC lint & synthesis** | Verilator RTL lint, Yosys and Cadence Genus logic synthesis, SKY130 standard-cell mapping, timing/QoR reports, synthesis netlists and cell-area reports |
 | **Simulation & waveform debug** | Cadence Xcelium, SimVision, Synopsys VCS, waveform analysis, Perl multi-seed regression scripts |
-| **Processor architecture** | RV32I single-cycle implementation, 8-bit nanoprocessor design; RV32I pipelining and hazard handling in progress |
+| **Processor architecture** | RV32I single-cycle datapath and control, instruction formats and immediate decoding, 8-bit nanoprocessor design |
 | **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
-| **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing, class-imbalance handling, classification evaluation, ECG trace extraction |
+| **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing |
 
 ### Additional technical background & tools
 
 | Area | Background |
 | --- | --- |
-| **Languages** | VHDL, C, C++, Perl |
-| **Interfaces & protocols** | AXI4-Lite, AHB, PCIe, UART, SPI |
-| **EDA tools** | Design Compiler, SpyGlass, Verdi, ModelSim, QuestaSim, Cadence Virtuoso, AMD Vivado |
-| **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis (STA), lint, design for test (DFT), processor architecture |
-| **Additional FPGA platforms** | Intel/Altera Cyclone V, AMD Kintex-7 |
+| **Languages** | C, Perl |
+| **Interfaces & protocols** | UART, SPI |
+| **EDA tools** | Synopsys Verdi, ModelSim, QuestaSim |
+| **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis (STA) basics, RTL lint |
 | **Development environment** | Linux, Git, Make |
 
 ## [Selected Projects](#selected-projects)
