@@ -40,7 +40,7 @@ I'm an electrical engineering graduate student focused on **SoC and ASIC front-e
 
 Alongside my graduate studies, I am an **ASIC Design Verification Trainee at Maven Silicon**.
 
-My projects focus on **SoC building blocks**: AXI4 memory-mapped slaves, APB peripherals, synchronous FIFOs, packet-routing logic, and an RV32I processor. My packet-router project also demonstrates an **ASIC front-end flow: RTL lint → logic synthesis → SKY130 standard-cell mapping**.
+My projects focus on **SoC building blocks**: AXI4 memory-mapped slaves, APB peripherals, synchronous FIFOs, packet-routing logic, and an RV32I processor. My packet-router and AXI4 projects also demonstrate an **ASIC front-end flow: RTL → logic synthesis (Yosys, Cadence Genus) → SKY130 standard-cell mapping**.
 
 As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
 
@@ -53,8 +53,8 @@ As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I
 | **UVM & IP verification** | Transactions, sequences, sequencers, drivers, monitors, agents, environments, virtual sequencers, analysis ports, virtual interfaces, configuration |
 | **Functional verification** | Directed and constrained-random stimulus, independent scoreboards, reference models, readback checks, boundary testing, error injection, checker validation |
 | **Assertions & coverage** | SystemVerilog Assertions, bound FIFO/FSM properties, APB protocol checks, coverpoints, cross coverage |
-| **ASIC lint & synthesis** | Verilator RTL lint, Yosys logic synthesis, SKY130 standard-cell mapping, synthesis netlists and cell-area reports |
-| **Simulation & waveform debug** | Cadence Xcelium, SimVision, Synopsys VCS, waveform analysis |
+| **ASIC lint & synthesis** | Verilator RTL lint, Yosys and Cadence Genus logic synthesis, SKY130 standard-cell mapping, timing/QoR reports, synthesis netlists and cell-area reports |
+| **Simulation & waveform debug** | Cadence Xcelium, SimVision, Synopsys VCS, waveform analysis, Perl multi-seed regression scripts |
 | **Processor architecture** | RV32I single-cycle implementation, 8-bit nanoprocessor design; RV32I pipelining and hazard handling in progress |
 | **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
 | **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing, class-imbalance handling, classification evaluation, ECG trace extraction |
@@ -79,8 +79,10 @@ A 16 KB AXI4 memory-mapped slave with five independent channels, 32-bit data, IN
 - Built a UVM master agent with separate read/write sequencers and drivers, a handshake monitor, and a byte-addressed reference-memory scoreboard checking IDs, data, responses, and final-beat behavior.
 - Verified byte strobes, narrow and unaligned accesses, memory and 4 KB page boundaries, error responses, and constrained-random traffic.
 - **Recorded Xcelium full-test run:** 178 writes, 151 reads, zero skipped bytes, **100% of the defined command, write-data, and response functional coverage bins**, and zero UVM warnings, errors, or fatals.
+- **100-seed regression:** `axi_full_test` passed on **all 100 seeds**, each meeting 100% of the defined coverage bins with zero UVM errors or fatals and zero skipped bytes.
+- **ASIC front-end flow:** Cadence Genus synthesis of a scaled 256-byte variant on SKY130 HD at 100 MHz: **+2.22 ns worst setup slack**, zero violating paths, **74,943 µm²** mapped cell area. Caught and fixed an address-range mismatch in the scaled variant before the final run.
 
-[Full-test evidence](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/images/axi_full_seed1.png) · [Verification flow](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/images/axi_uvm_flow.png) · [Tests & current scope](https://github.com/Charan6556/axi4-memory-slave-uvm#tests)
+[Full-test evidence](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/images/axi_full_seed1.png) · [Regression evidence](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/regression_100_seeds.png) · [Synthesis evidence](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/synthesis_256b_qor.png) · [Verification flow](https://github.com/Charan6556/axi4-memory-slave-uvm/blob/main/docs/images/axi_uvm_flow.png) · [Tests & current scope](https://github.com/Charan6556/axi4-memory-slave-uvm#tests)
 
 ### [1×3 Packet Router — RTL & UVM Verification](https://github.com/Charan6556/router-1x3-uvm)
 
