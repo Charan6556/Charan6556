@@ -158,6 +158,17 @@ For the lab interview, I designed an **8-bit nanoprocessor from scratch in Quart
 
 Teaching these fundamentals strengthens how I reason about RTL, debug hardware, and explain design decisions.
 
+<p align="center">
+  <img src="assets/design-approach.svg" width="150" alt="A chip on a blueprint with a pencil"/>
+</p>
+
+## [How I Approach Design](#how-i-approach-design)
+
+- **Start from the spec, not the code:** write down the features and edge cases first, then build block by block (AXI4 slave rebuilt from a written spec: bursts, WSTRB, unaligned starts, SLVERR).
+- **Safe defaults, no latches:** every combinational block assigns a default first, then overrides per case, so unknown inputs do nothing (RV32I decoder starts from a NOP control word).
+- **Split the design into small jobs:** separate read and write controllers, one module per datapath step, so each piece can be tested and explained on its own.
+- **Check results after every tool step:** lint before simulation (router: zero Verilator warnings), and question synthesis numbers (caught an address-range mismatch in the scaled AXI variant before the final Genus run).
+
 ## [How I Approach Verification](#how-i-approach-verification)
 
 - **Model expected behavior independently** so DUT status signals cannot hide their own bugs.
