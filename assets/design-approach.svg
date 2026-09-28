@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160">
+  <!-- blueprint sheet -->
+  <rect x="14" y="18" width="150" height="124" rx="8" fill="#0f3a5f"/>
+  <g stroke="#2f6a99" stroke-width="1">
+    <path d="M14 43 H164 M14 68 H164 M14 93 H164 M14 118 H164"/>
+    <path d="M39 18 V142 M64 18 V142 M89 18 V142 M114 18 V142 M139 18 V142"/>
+  </g>
+  <!-- chip -->
+  <g stroke="#e2e8f0" stroke-width="3" stroke-linecap="round">
+    <path d="M62 44 V36 M78 44 V36 M94 44 V36 M110 44 V36"/>
+    <path d="M62 116 V124 M78 116 V124 M94 116 V124 M110 116 V124"/>
+    <path d="M50 56 H42 M50 72 H42 M50 88 H42 M50 104 H42"/>
+    <path d="M122 56 H130 M122 72 H130 M122 88 H130 M122 104 H130"/>
+  </g>
+  <rect x="50" y="44" width="72" height="72" rx="6" fill="#1e293b" stroke="#e2e8f0" stroke-width="3"/>
+  <!-- tiny logic inside: AND gate + wire -->
+  <path d="M64 66 H78 A14 14 0 0 1 78 94 H64 Z" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  <path d="M56 72 H64 M56 88 H64 M92 80 H112" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="112" cy="80" r="3.2" fill="#fbbf24"/>
+  <!-- pencil -->
+  <g transform="rotate(-40 160 112)">
+    <rect x="128" y="104" width="52" height="14" rx="2" fill="#f59e0b"/>
+    <rect x="172" y="104" width="10" height="14" rx="2" fill="#f472b6"/>
+    <rect x="168" y="104" width="5" height="14" fill="#cbd5e1"/>
+    <path d="M128 104 L114 111 L128 118 Z" fill="#fde68a"/>
+    <path d="M118 109 L114 111 L118 113 Z" fill="#1e293b"/>
+  </g>
+</svg>
