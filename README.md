@@ -41,7 +41,7 @@ I'm an electrical engineering graduate student focused on **SoC and ASIC front-e
 
 Alongside my graduate studies, I am an **ASIC Design Verification Trainee at Maven Silicon**.
 
-My projects focus on **SoC building blocks**: AXI4 memory-mapped slaves, APB peripherals, synchronous FIFOs, packet-routing logic, and an RV32I processor. My packet-router and AXI4 projects also demonstrate an **ASIC front-end flow: RTL → logic synthesis (Yosys, Cadence Genus) → SKY130 standard-cell mapping**.
+My projects focus on **SoC building blocks**: AXI4 memory-mapped slaves, APB peripherals, synchronous FIFOs, packet-routing logic, and a five-stage pipelined RV32I processor. My RV32I, AXI4, and packet-router projects also demonstrate an **ASIC front-end flow: RTL → logic synthesis (Yosys, Cadence Genus) → SKY130 standard-cell mapping**.
 
 As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
 
@@ -56,7 +56,7 @@ As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I
 | **Assertions & coverage** | SystemVerilog Assertions, bound FIFO/FSM properties, APB protocol checks, coverpoints, cross coverage |
 | **ASIC lint & synthesis** | Verilator RTL lint, Yosys and Cadence Genus logic synthesis, SKY130 standard-cell mapping, timing/QoR reports, synthesis netlists and cell-area reports |
 | **Simulation & waveform debug** | Cadence Xcelium, SimVision, Synopsys VCS, waveform analysis, Perl multi-seed regression scripts |
-| **Processor architecture** | RV32I single-cycle datapath and control, instruction formats and immediate decoding, 8-bit nanoprocessor design |
+| **Processor architecture** | RV32I five-stage pipeline: forwarding, load-use stalls, branch/jump flush; instruction formats and immediate decoding; 8-bit nanoprocessor design |
 | **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
 | **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing |
 
@@ -71,6 +71,17 @@ As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I
 | **Development environment** | Linux, Git, Make |
 
 ## [Selected Projects](#selected-projects)
+
+### [RV32I Five-Stage Pipelined Processor — RTL, UVM & Synthesis](https://github.com/Charan6556/RISCV-32I)
+
+An in-order, five-stage pipeline implementing the 37 RV32I base integer instructions, with EX/MEM and MEM/WB forwarding, load-use stall detection, and branch/jump resolution in EX with pipeline flush.
+
+- **UVM verification:** commit-based reference scoreboard, 10 bound SVA properties, and functional coverage: **100% of the 37 instruction bins** and 98.41% pipeline coverage (seed 25: 682 commits, 0 scoreboard errors).
+- **Regression:** **1,000 seeds passed**, each running 80 directed + 60 random instructions. Traced 12 earlier failing seeds to a signed-shift bug in the scoreboard's reference model.
+- **Program run:** Bubble Sort sorted correctly in 169 cycles for 121 retired instructions (CPI 1.40).
+- **ASIC front-end flow:** Cadence Genus synthesis on SKY130 HD met a **4 ns (250 MHz)** pre-layout target at the typical corner, 71,967 µm² cell area.
+
+[Coverage evidence](https://github.com/Charan6556/RISCV-32I/blob/main/docs/images/coverage-seed25.png) · [Regression evidence](https://github.com/Charan6556/RISCV-32I/blob/main/docs/images/regression-1000-pass.png) · [Synthesis report](https://github.com/Charan6556/RISCV-32I/blob/main/synth/reports/4ns/qor.rpt) · [Debugging notes](https://github.com/Charan6556/RISCV-32I/blob/main/docs/debugging.md)
 
 ### [AXI4 Memory Slave — RTL & UVM Verification](https://github.com/Charan6556/axi4-memory-slave-uvm)
 
@@ -108,14 +119,6 @@ A parameterized FIFO with an independent queue-based scoreboard and assertions f
 
 - Checked full/empty boundaries, data ordering, and blocked overflow/underflow attempts with directed fill-and-drain sequences.
 - **Recorded run:** 16 accepted writes, 16 accepted reads, no remaining reference entries, and zero UVM warnings, errors, or fatals.
-
-### [RV32I Processor — Ongoing Development](https://github.com/Charan6556/RISCV-32I)
-
-A SystemVerilog processor project progressing from a single-cycle implementation toward a pipelined architecture.
-
-- **Completed milestone:** single-cycle processor.
-- **In progress:** pipelining and hazard handling.
-- **Roadmap:** AXI4-Lite integration and UVM verification.
 
 <details>
 <summary><strong>More projects: SystemVerilog foundations & machine learning</strong></summary>
