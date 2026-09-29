@@ -77,7 +77,7 @@ As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I
 An in-order, five-stage pipeline implementing the 37 RV32I base integer instructions, with EX/MEM and MEM/WB forwarding, load-use stall detection, and branch/jump resolution in EX with pipeline flush.
 
 - **UVM verification:** commit-based reference scoreboard, 10 bound SVA properties, and functional coverage: **100% of the 37 instruction bins** and 98.41% pipeline coverage (seed 25: 682 commits, 0 scoreboard errors).
-- **Regression:** **1,000 seeds passed**, each running 80 directed + 60 random instructions. Traced 12 earlier failing seeds to a signed-shift bug in the scoreboard's reference model.
+- **Regression:** **1,000 seeds passed, 0 failures**, each running 80 directed + 60 random instructions (**60,000 random instructions** in total). Traced 12 earlier failing seeds to a signed-shift bug in the scoreboard's reference model.
 - **Program run:** Bubble Sort sorted correctly in 169 cycles for 121 retired instructions (CPI 1.40).
 - **ASIC front-end flow:** Cadence Genus synthesis on SKY130 HD met a **4 ns (250 MHz)** pre-layout target at the typical corner, 71,967 µm² cell area.
 
